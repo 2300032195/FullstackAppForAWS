@@ -10,7 +10,7 @@ pipeline {
         BACKEND_DIR = 'crud_backend/crud_backend-main'
         FRONTEND_DIR = 'crud_frontend/crud_frontend-main'
 
-        TOMCAT_URL = 'http://51.20.108.219:9090/manager/text'
+        TOMCAT_URL = 'http://13.53.170.58:9090/manager/text'
         TOMCAT_USER = 'admin'
         TOMCAT_PASS = 'admin'
 
@@ -21,7 +21,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git url: 'https://github.com/2300032195/FullstackAppForAWS.git', branch: 'main'
+                git branch:'main', url: 'https://github.com/2300032195/FullstackAppForAWS.git'
             }
         }
 
